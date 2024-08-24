@@ -1,0 +1,140 @@
+.happening-now {
+  margin: 30px;
+  text-align: left;
+  margin-top: 100px;
+}
+
+.happening-now h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.largeArticles {
+  display: flex;
+  flex-direction: column;
+}
+.smallArticles {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.article {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+}
+
+.largeArticle {
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 30px;
+}
+
+.smallArticle {
+  height: 200px;
+  width: 30%;
+  position: relative;
+}
+
+.smalImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.article-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.article-text h2,
+.article-text p {
+  margin: 0;
+}
+.largeArticle h2 {
+  font-size: 1rem;
+}
+.largeArticle p {
+  font-size: 0.7rem;
+}
+
+.smallArticle h2 {
+  font-size: 0.8rem;
+}
+.smallArticle p {
+  font-size: 0.5rem;
+}
+/* Media Queries */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .largeArticles {
+    flex: 2 1 100%;
+    height: 100%;
+  }
+
+  .smallArticles {
+    flex: 1 1 40%; /* Flex-grow 1, shrink 1, 40% of the space */
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .largeArticle {
+    min-height: 350px;
+    width: 100%; /* Ensure full width within the parent */
+  }
+
+  .smallArticle {
+    min-height: 250px;
+    width: 100%; /* Ensure full width within the parent */
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    gap: 30px;
+  }
+
+  .largeArticle {
+    min-height: 400px;
+  }
+
+  .smallArticle {
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .happening-now h2 {
+    font-size: 2.4rem;
+  }
+
+  .largeArticle {
+    min-height: 450px;
+  }
+
+  .smallArticle {
+    min-height: 350px;
+  }
+}
